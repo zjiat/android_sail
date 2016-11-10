@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,13 +13,17 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	public static  final String TAG = "MainActivity";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.d(TAG, "Activity OnCreate");
 		setContentView(R.layout.activity_main);
 		Button button = (Button) findViewById(R.id.button);
 		button.setOnClickListener(new OnClickListener() {
 
+		
 			@Override
 			public void onClick(View v) {
 				AnotherRightFragment fragment = new AnotherRightFragment();
@@ -30,7 +35,21 @@ public class MainActivity extends Activity {
 
 		});
 	}
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		Log.d(TAG, "Activity OnStart!");
+	}
 
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Log.d(TAG, "Activity OnResume!");
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
