@@ -20,6 +20,7 @@ public class RightFragment extends Fragment {
 		Log.d(TAG, "OnAttach");
 	}
 	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
