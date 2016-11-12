@@ -40,3 +40,4 @@ captures/
 *.jks
 
 .metadata/
+/FragmentTest
