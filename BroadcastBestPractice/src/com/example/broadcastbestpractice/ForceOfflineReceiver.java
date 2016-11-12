@@ -24,6 +24,7 @@ public class ForceOfflineReceiver extends BroadcastReceiver {
 				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				context.startActivity(intent);
 			}
+			
 		});
 		
 		AlertDialog alertDialog = dialogBuilder.create();
